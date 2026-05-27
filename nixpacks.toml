@@ -1,2 +1,18 @@
 [phases.setup]
-nixPkgs = ["ffmpeg", "google-fonts", "dejavu_fonts", "liberation_ttf"]
+nixPkgs = [
+  "ffmpeg",
+  "pkg-config",
+  "cairo",
+  "pango",
+  "libpng",
+  "libjpeg",
+  "giflib",
+  "librsvg",
+  "pixman"
+]
+
+[phases.install]
+cmds = ["npm install"]
+
+[start]
+cmd = "node server.js"
